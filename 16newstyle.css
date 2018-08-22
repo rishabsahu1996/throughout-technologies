@@ -1,0 +1,178 @@
+body {
+      font-size: 12px;
+      font-family: sans-serif;
+      color: black;
+      }
+    *,body,ul,ol{
+      padding:0px;
+      margin: 0px;
+    }
+    a{
+      text-decoration: none;
+      color:#007BE1;
+    }
+    #wrapper{
+   
+    }
+    .inner-wrapper{
+      width: 750px;
+      height: 100%;
+      margin: 30px auto;
+      padding: 50px 40px;
+      box-sizing: border-box;
+      border-style: outset;
+    }
+    .form-tag{
+      width: 670px;
+      height: 100%;
+      overflow: hidden;
+    }
+    .form-left{ 
+      width: 370px;
+      height: 100%;
+      float: left;
+      overflow: hidden;
+    }
+    .tagline{
+      line-height: 36px;
+    }
+    .tagline p{
+      font-size: 23px;
+    }
+
+    .form-group{ 
+      float: left;
+      width: 177px;
+     height: 64px;
+    } 
+
+    .result{ 
+      float: left;
+      width: 177px;
+   
+    } 
+
+    .form-group1{ 
+      overflow: hidden;
+      float: left;
+      height: 64px;
+    }
+    .form-group1 input{ 
+     border-left: white;
+      border-right: white;
+      border-top: white;
+      width: 267px; 
+      height: 44px
+    }
+      .form-group1 input{ 
+     border-left: white;
+      border-right: white;
+      border-top: white;
+      width: 278px; 
+      height: 44px
+    }
+         .form-group1 span { 
+      width: 50px; 
+      height: 44px;
+      font-size: 15px;
+    }
+    .Add{
+      margin: 20px 0px;
+    }
+    .Add a{
+       background-color: #007BE1; 
+      color: white;
+      text-align: center;
+      float: left;
+      font-size: 15px;
+      width:88px;
+      height: 36px;
+      line-height: 33px;
+      font-weight: bold;
+      border-radius: 10 px;
+      
+    }
+    .Add button{
+      background-color: #007BE1; 
+      color: white;
+      text-align: center;
+      float: right;
+      font-size: 15px;
+      width:88px;
+      height: 36px;
+      line-height: 33px;
+      font-weight: bold;
+      border-radius: 10 px;
+    }
+    .form-group input{
+      width: 145px;
+      height: 44px;
+      margin-right: 16px;
+      border-left: white;
+      border-right: white;
+      border-top: white;
+    }
+
+      .form-add{ 
+      float: left;
+      width: 300px;
+      height: 6 0px;
+    }
+     .form-add input{
+      width: 48%;
+      height: 44px;
+      margin-right: 16px;
+      border-left: white;
+      border-right: white;
+      border-top: white;
+    } 
+      .form-add input{
+      width: 100px;
+      height: 44px;
+      margin:0px 4%;
+      border-left: white;
+      border-right: white;
+      border-top: white;
+    }
+    .form-add p{
+      display: inline-block;
+      height: 21px;
+      width: 14px;
+      background-color: red;
+      border-radius: 19px;
+    }
+    .form-add a{
+    color:white;
+    margin-left:3px; 
+    line-height:23px;
+    }
+    #show{
+      margin: 20px 0px;
+    }
+    
+    .spanuser{
+
+    }
+
+    .form-right{
+      width: 252px;
+      height: 100%;
+      float: right;
+    }
+    .textline{
+      text-align: center;
+      font-size: 16px;
+    }
+    .form-buttom{
+      margin: 20px 20px;
+    }
+
+    .color{
+  border-bottom-color: blue;
+  color:blue;
+}
+    .color1{
+  border-bottom-color: black;
+  color:black;
+}
+    
