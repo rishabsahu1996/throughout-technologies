@@ -1,8 +1,8 @@
 create database Whatapps;
 
 	create table Users ( 
-		userId int --primary key
-		PhoneNumber int(20), -- unique 
+		userId int, 
+		PhoneNumber int(20), 
 		CountryCode int ,
 		UserName varchar(20),
 		ProfilePic varchar(20), 
@@ -12,38 +12,56 @@ create database Whatapps;
 		 	UNIQUE (PhoneNumber)
 		);
 
-	create table FriendLists (
-		FriendListsId int ,   --primary key
-		FriendPhoneNumber int(20), 
-		userId int(20),  --foreign key
-		Block varchar(5)
-			primary key (FriendListId),
-			FOREIGN KEY (userId) REFERENCES Users(userId)
+insert into Users values(11 , 7894561230 , 91 , "Jone" ,"JonePic" ,"Only Whatapps !!!", "yes");
+insert into Users values(12 , 7849562131 , 91 , "Ben" ,"BenPic" ,"hi ben !!!", "yes");
+insert into Users values(14 , 7995461230 , 91 , "hony" ,"honyPic" ,"Happy Birthday !!!", "yes");
+insert into Users values(15 , 7894563030 , 91 , "tom" ,"TomPic" ,"Holiday !!!", "yes");
+insert into Users values(16 , 7794544230 , 91 , "mark" ,"markPic" ,"Only calls !!!", "yes");
 
-		);
-	create table Messages (
-		MessageID int(20), -- primary key
-		Message varchar(1000),
-		MessageStatus varchar(20),
-		userId int , --foreign key
-		OtherUserId int , --foreign key
-		MessageTime varchar(10),
-				primary key (MessageId),
-				FOREIGN KEY (userId) REFERENCES Users(userId),
-				FOREIGN KEY (OtherUserId) REFERENCES Users(userId)				
-		);
+
+ALTER TABLE FriendLists
+MODIFY COLUMN FriendPhoneNumber varchar(20);
 
 
 
-	create table ChatRooms (
-		ChatRoomId int  -- primary key
-		MessageID int(20), --foreign key
-		userId int , --foreign key 
-		ArchivedChats int ,
-		ReadStatus int ,
-				primary key (ChatRoomId),
-				FOREIGN KEY (userId) REFERENCES Users(userId),
-				FOREIGN KEY (MessageID) REFERENCES Messages(MessageID),
-			
-		);
+create table FriendLists (
+FriendListId int ,   
+FriendPhoneNumber int(20), 
+userId int(20),  
+Block varchar(5),
+primary key (FriendListId),
+FOREIGN KEY (userId) REFERENCES Users(userId)
+);
+
+
+
+insert into FriendLists values(1865 , 7995461230 , 14 , "no");
+insert into FriendLists values(1895 , 7794544230 , 16 , "no");
+
+create table Messages (
+MessageID int(20),
+Message varchar(1000),
+MessageStatus varchar(20),
+userId int ,
+OtherUserId int ,
+MessageTime varchar(10),
+primary key (MessageId),
+FOREIGN KEY (userId) REFERENCES Users(userId),
+FOREIGN KEY (OtherUserId) REFERENCES Users(userId)				
+);
+
+
+insert into Messages values(1234 ,"hi",  , "Jone" ,"JonePic" ,"Only Whatapps !!!", "yes");
+
+create table ChatRooms (
+ChatRoomId int,
+MessageID int(20),
+userId int ,
+ArchivedChats int ,
+ReadStatus int ,
+primary key (ChatRoomId),
+FOREIGN KEY (userId) REFERENCES Users(userId),
+FOREIGN KEY (MessageID) REFERENCES Messages(MessageID)	
+);
 	
+
