@@ -33,6 +33,30 @@ create database Whatapps;
 				FOREIGN KEY (senderId) REFERENCES Users(userId)				
 		);
 
+	create table Groups (
+		GroupID int(20), -- primary key
+		GroupName varchar(20),
+		GroupCreatorID int,
+		GroupPPic varchar(20),
+		userId int , --foreign 
+				primary key (GroupID),
+				FOREIGN KEY (userId) REFERENCES Users(userId),
+				FOREIGN KEY (GroupCreatorId) REFERENCES Users(userId)				
+		);	
+
+	create table GroupDetails(
+		GDetailsID int(20), -- primary key
+		GroupID int;        --foreign 
+		MemberID varchar(20), --foreign 
+		AdminStatus varchar(20),
+		userId int ,         --foreign 
+				primary key (GDetailsID),
+				FOREIGN KEY (userId) REFERENCES Users(userId),
+				FOREIGN KEY (MemberId) REFERENCES Users(userId),
+				FOREIGN KEY (GroupID) REFERENCES Groups(GroupID)			
+		);	
+
+
 	create table ChatRooms (
 		ChatRoomId int  -- primary key
 		MessageID int(20), --foreign key
