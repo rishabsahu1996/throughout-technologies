@@ -1,4 +1,5 @@
 puts "unary opertar"
+hello every one
 
 puts("Addintion")
 puts(5 + 2)
